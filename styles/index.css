@@ -1,0 +1,199 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f2af00;
+}
+
+.outer-container {
+  height: 450px;
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f2af00;
+  padding: 20px;
+  border-radius: 10px;
+  border: 0.5px solid white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 20px;
+}
+
+.screen-container {
+  position: relative;
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 20px;
+  background-color: #283136;
+  border-radius: 10px;
+  height: 250px;
+}
+
+#inner-screen {
+  position: relative;
+  height: 200px;
+  background-color: black;
+}
+
+#drone {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.button-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 2fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 0px;
+}
+
+.button-div1 {
+  grid-area: 1 / 2 / 2 / 3;
+  height: 60px;
+}
+.button-div2 {
+  grid-area: 1 / 1 / 2 / 2;
+  height: 60px;
+}
+
+.non-directional-button-parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.non-directional-button-div1 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.non-directional-button-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.non-directional-button-div3 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.non-directional-button-div4 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+.directional-button-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+}
+
+.directional-button-div1 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.directional-button-div2 {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.directional-button-div3 {
+  grid-area: 2 / 3 / 3 / 4;
+}
+.directional-button-div4 {
+  grid-area: 3 / 2 / 4 / 3;
+}
+
+#place {
+  color: gray;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #161817;
+}
+span {
+  position: relative;
+}
+
+#attack {
+  color: gray;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #161817;
+  top: 22px;
+}
+
+#move {
+  background-color: green;
+}
+#left {
+  background-color: #161810;
+}
+#right {
+  background-color: #161817;
+}
+
+#report {
+  background-color: orange;
+  border-radius: 20%;
+}
+
+.bullet {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: red;
+  border: none;
+  outline: none;
+}
+
+#popUpModal {
+  position: relative;
+  background-color: white;
+  height: 100px;
+}
+
+#send {
+  background-color: aqua;
+  border: none;
+}
+
+#x-axis {
+  position: relative;
+  width: 96%;
+}
+#y-axis {
+  position: relative;
+  width: 96%;
+}
+
+#direction {
+  position: relative;
+  width: 70%;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+form {
+  position: absolute;
+  left: 10;
+}
+
+input {
+  /* border-radius: 5px; */
+  border: none;
+}
+
+select {
+  border: none;
+}

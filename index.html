@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DRONE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="parent">
+            <!-- Modal -->
+            <div id="popUpModal" class="modal container">
+                <div class="centered">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form onSubmit="handleDronePositioning(e)">
+                          <label for="pos">PLACE YOU DRONE</label>
+                          <span
+                            ><input
+                            placeholder="x-axis"
+                              name="x-axis"
+                              id="x-axis"
+                              class="x-input"
+                              type="number"
+                            /><input
+                            placeholder="y-axis"
+                              name="y-axis"
+                              id="y-axis"
+                              class="y-input"
+                              type="number"
+                            /><select name="direction" id="direction">
+                              <option value="north">North</option>
+                              <option value="east">East</option>
+                              <option value="south">South</option>
+                              <option value="west">West</option></select
+                            ><button type="submit" id="send" class="send">
+                              PLACE
+                            </button></span
+                          >
+                        </form>
+                      </div>
+                </div>
+            </div>
+            <div class="screen-container">
+                DRONE
+                <div id="inner-screen">
+                    <div id="bullet-container"></div>
+                    <div id="bullet-container"></div>
+                    <a href="https://imgbb.com/" id="drone" class="drone-sprite"><img width="20px" height="20px"
+                            src="./assets/drone (1).png" alt="drone-5" border="0" /></a>
+                </div>
+            </div>
+            <div>
+                <div id="btn-area" class="button-parent">
+                    <div class="button-div1">
+                        <div class="non-directional-button-parent">
+                            <span>
+                                <div class="non-directional-button-div4"><button id="attack">A</button></div>
+                            </span>
+                            <div class="non-directional-button-div2"><button id="place">P</button></div>
+                        </div>
+                    </div>
+                    <div class="button-div2">
+                        <div class="directional-button-parent">
+                            <div class="directional-button-div1"><button id="right"> <i
+                                        class="fa-solid fa-caret-left"></i></button></div>
+                            <div class="directional-button-div2"><button id="move"> <i
+                                        class="fa-solid fa-caret-up"></i></button></div>
+                            <div class="directional-button-div3"> <button id="left"><i
+                                        class="fa-solid fa-caret-right"></i></button></div>
+                            <div class="directional-button-div4"><button id="report">R</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>
