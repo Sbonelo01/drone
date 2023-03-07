@@ -66,15 +66,7 @@ sendBtn.addEventListener("click", (e) => {
 });
 
 report.addEventListener("click", () => {
-  alert(
-    dronePositionX +
-      "y-axis" +
-      " " +
-      dronePositionY +
-      "y-axis" +
-      " " +
-      direction.value
-  );
+  alert(dronePositionX + " " + dronePositionY + " " + direction.value);
 });
 
 place.addEventListener("click", () => {
@@ -91,12 +83,6 @@ moveRightButton.addEventListener("click", () => {
   const currentRight = Number(droneSpirit.style.left.slice(0, -2));
   if (currentRight !== 0) droneSpirit.style.left = currentRight - 10 + "px";
 });
-
-function closeModal() {
-  alert("hi");
-  modal.style.display = "none";
-  buttonArea.style.opacity = 4;
-}
 
 function moveNorth() {
   const currPos = Number(droneSpirit.style.bottom.slice(0, -2));
