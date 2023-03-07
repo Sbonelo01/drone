@@ -1,3 +1,5 @@
-# drone
+# Toy drone
 
-## Play here: https://sbonelo01.github.io/
+## Play here: https://sbonelo01.github.io/drone/
+
+##### Sbonelo Mkhize | Web developer | sbonelomkhize15@gmail.com | 0610692364
