@@ -3,7 +3,7 @@ const drone = document.getElementById("drone");
 const moveLeftButton = document.getElementById("left");
 const moveRightButton = document.getElementById("right");
 const modal = document.getElementById("popUpModal");
-const closeBtn = document.getElementsByClassName("close")[0];
+const closeBtn = document.getElementById("close");
 const xAxis = document.getElementById("x-axis");
 const yAxis = document.getElementById("y-axis");
 const direction = document.getElementById("direction");
@@ -22,18 +22,6 @@ window.onload = function () {
   buttonArea.style.opacity = 0;
   drone.style.display = "none";
   modal.style.display = "block";
-};
-
-closeBtn.onclick = function () {
-  modal.style.display = "none";
-  drone.style.display = "block";
-};
-
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-    drone.style.display = "block";
-  }
 };
 
 sendBtn.onClick = function () {
@@ -91,6 +79,7 @@ report.addEventListener("click", () => {
 
 place.addEventListener("click", () => {
   modal.style.display = "block";
+  buttonArea.style.opacity = 0;
 });
 
 // function moveSpriteUp() {
@@ -103,6 +92,11 @@ moveRightButton.addEventListener("click", () => {
   const currentRight = Number(droneSpirit.style.left.slice(0, -2));
   droneSpirit.style.left = currentRight - 10 + "px";
 });
+
+function closeModal() {
+  alert("hi");
+  modal.style.display = "none";
+}
 
 function moveNorth() {
   const currPos = Number(droneSpirit.style.bottom.slice(0, -2));
