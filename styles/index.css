@@ -36,6 +36,10 @@ body {
   height: 250px;
 }
 
+.drone-sprite {
+  position: absolute;
+}
+
 #inner-screen {
   position: relative;
   height: 200px;

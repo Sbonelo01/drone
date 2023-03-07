@@ -1,4 +1,4 @@
-const droneSpirit = document.querySelector(".drone-sprite");
+const droneSprite = document.querySelector(".drone-sprite");
 const drone = document.getElementById("drone");
 const moveLeftButton = document.getElementById("left");
 const moveRightButton = document.getElementById("right");
@@ -52,15 +52,18 @@ function hasPosition() {
 }
 
 if (hasPosition) {
-  droneSpirit.style.bottom = dronePositionX;
-  droneSpirit.style.left = dronePositionY;
+  droneSprite.style.bottom = dronePositionX;
+  droneSprite.style.left = dronePositionY;
 }
 
 sendBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  droneSpirit.style.bottom = document.getElementById("x-axis").value;
-  droneSpirit.style.left = document.getElementById("y-axis").value;
-  drone.style.display = "block";
+  droneSprite.style.bottom =
+    Math.round(document.getElementById("x-axis").value) + "px";
+  droneSprite.style.left =
+    Math.round(document.getElementById("y-axis").value) + "px";
+
+  drone.style.bottom = drone.style.display = "block";
   modal.style.display = "none";
   buttonArea.style.opacity = 4;
 });
@@ -75,34 +78,34 @@ place.addEventListener("click", () => {
 });
 
 moveLeftButton.addEventListener("click", () => {
-  const currentLeft = Number(droneSpirit.style.left.slice(0, -2));
-  if (currentLeft <= 130) droneSpirit.style.left = currentLeft + 10 + "px";
+  const currentLeft = Number(droneSprite.style.left.slice(0, -2));
+  if (currentLeft <= 130) droneSprite.style.left = currentLeft + 10 + "px";
 });
 
 moveRightButton.addEventListener("click", () => {
-  const currentRight = Number(droneSpirit.style.left.slice(0, -2));
-  if (currentRight !== 0) droneSpirit.style.left = currentRight - 10 + "px";
+  const currentRight = Number(droneSprite.style.left.slice(0, -2));
+  if (currentRight !== 0) droneSprite.style.left = currentRight - 10 + "px";
 });
 
 function moveNorth() {
-  const currPos = Number(droneSpirit.style.bottom.slice(0, -2));
-  if (currPos <= 160) droneSpirit.style.bottom = currPos + 10 + "px";
+  const currPos = Number(droneSprite.style.bottom.slice(0, -2));
+  if (currPos <= 160) droneSprite.style.bottom = currPos + 10 + "px";
 }
 
 function moveEast() {
-  const currPos = Number(droneSpirit.style.left.slice(0, -2));
-  if (currPos <= 130) droneSpirit.style.left = currPos + 10 + "px";
+  const currPos = Number(droneSprite.style.left.slice(0, -2));
+  if (currPos <= 130) droneSprite.style.left = currPos + 10 + "px";
 }
 
 function moveWest() {
-  const currPos = Number(droneSpirit.style.left.slice(0, -2));
+  const currPos = Number(droneSprite.style.left.slice(0, -2));
   console.log(currPos);
-  if (currPos > 0) droneSpirit.style.left = currPos - 10 + "px";
+  if (currPos > 0) droneSprite.style.left = currPos - 10 + "px";
 }
 
 function moveSouth() {
-  const currPos = Number(droneSpirit.style.bottom.slice(0, -2));
-  if (currPos > 0) droneSpirit.style.bottom = currPos - 10 + "px";
+  const currPos = Number(droneSprite.style.bottom.slice(0, -2));
+  if (currPos > 0) droneSprite.style.bottom = currPos - 10 + "px";
 }
 
 moveBtn.addEventListener("click", () => {
