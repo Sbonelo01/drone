@@ -82,7 +82,6 @@ place.addEventListener("click", () => {
   buttonArea.style.opacity = 0;
 });
 
-// function moveSpriteUp() {
 moveLeftButton.addEventListener("click", () => {
   const currentLeft = Number(droneSpirit.style.left.slice(0, -2));
   droneSpirit.style.left = currentLeft + 10 + "px";
@@ -96,6 +95,7 @@ moveRightButton.addEventListener("click", () => {
 function closeModal() {
   alert("hi");
   modal.style.display = "none";
+  buttonArea.style.opacity = 4;
 }
 
 function moveNorth() {
