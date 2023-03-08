@@ -17,7 +17,6 @@ const report = document.getElementById("report");
 
 let bullets = [];
 
-// When the page loads, show the modal
 window.onload = function () {
   buttonArea.style.opacity = 0;
   drone.style.display = "none";
@@ -28,8 +27,6 @@ sendBtn.onClick = function () {
   modal.style.display = "none";
   buttonArea.style.opacity = 4;
 };
-
-// initial drone positioning
 
 let dronePositionX, dronePositionY;
 sendBtn.addEventListener("click", () => {
